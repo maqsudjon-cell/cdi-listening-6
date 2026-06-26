@@ -88,10 +88,32 @@ select.gap-input{width:70px}
 .result-row.incorrect{background:var(--bad-soft);padding:7px 8px;border-radius:2px}
 @media(max-width:768px){
   .landing-title{font-size:26px}.card{padding:20px}.info-grid{grid-template-columns:1fr}
-  .tmain{flex-direction:column}.topbar{padding:0 8px}.tb-logo{font-size:17px}
-  .tb-center{position:static;left:auto;top:auto;transform:none;gap:4px}
-  .gap-input{width:100px}.timer{font-size:13px}.icon-btn{width:34px;height:34px;font-size:16px}
+  .tmain{flex-direction:column}.topbar{padding:0 6px}.tb-logo{font-size:15px}
+  .tb-center{position:static;left:auto;top:auto;transform:none;gap:4px;margin:0 auto}
+  .gap-input{width:90px;font-size:13px}.timer{font-size:12px;padding:4px 8px}
+  .icon-btn{width:30px;height:30px;font-size:14px}
+  .audio-bar{padding:8px 10px;gap:6px;flex-wrap:wrap}
+  .audio-bar audio{min-width:140px;height:32px}
+  .audio-bar .sec-label{font-size:11px}
+  .qpbody{padding:12px 14px 60px}
+  .note-line{font-size:13px}
+  .tr-body{font-size:12px;max-height:200px}
+  .footer{padding:0 4px;gap:2px}
+  .sec-tab{padding:6px 8px;font-size:11px}
+  .qnav-wrap{min-width:120px}
+  .qnb{width:24px;height:24px;font-size:10px}
 }
+/* Prevent zoom on focus for iOS */
+input,select,button{font-size:16px!important}
+/* Scrollable body */
+.qpbody{scroll-behavior:smooth}
+/* Better question cards */
+.qi{border-left:3px solid var(--accent);transition:all .15s;margin-bottom:12px}
+.qi:focus-within{border-left-color:var(--navy);box-shadow:0 0 0 3px var(--accent-soft)}
+/* Improve radio */
+.radio-row{padding:8px 10px;border:1px solid var(--border);border-radius:2px;margin:4px 0}
+.radio-row:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+
 </style>
 </head>
 <body>
