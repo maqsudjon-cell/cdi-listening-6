@@ -188,7 +188,7 @@ function startTest(){
     html+='<div class="part-header"><span class="part-badge">Section '+s+'</span><span class="part-range">Questions '+(s*10-9)+'–'+(s*10)+'</span></div>';
     html+='<div class="part-body" id="secBody'+s+'"></div></div>';
   }
-  html+='<div class="submit-wrap"><button class="btn-submit" onclick="submitTest()">✓ Submit Answers</button></div>';
+  html+='<div class="submit-wrap" id="submitWrap" style="display:none"><button class="btn-submit" onclick="submitTest()">✓ Submit Answers</button></div>';
   $('mainContent').innerHTML=html;
   curSec=1;
   $('audioPlayer').src=SEC_AUDIO[0];
@@ -210,6 +210,7 @@ function renderSec(s){
   else if(s===4) html=renderSec4();
   $('secBody'+s).innerHTML=html;
   updateProg();
+  showSubmit();
 }
 
 // Section data
@@ -299,6 +300,7 @@ function updateProg(){
   document.querySelectorAll('.part-tab').forEach((b,i)=>{let s=i+1;let r=RANGES[s];let c=0;for(let j=r[0];j<=r[1];j++){if(getA(j))c++;}b.innerHTML='Section '+(i+1)+'<small>'+c+'/'+10+'</small>';});
 }
 function switchSec(n){renderSec(n);}
+function showSubmit(){let w=$('submitWrap');if(w)w.style.display=(curSec===4?'block':'none');}
 function setSpeed(v,el){
   document.querySelectorAll('.speed-btn').forEach(b=>b.classList.remove('active'));
   el.classList.add('active');
