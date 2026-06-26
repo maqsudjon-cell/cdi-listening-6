@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD IELTS Listening – CDI Listening 6 | pangea8.com</title>
+<style>
+:root{--navy:#047857;--navy-dark:#035a44;--accent:#047857;--accent-hover:#035a44;--accent-soft:#d1fae5;--bg:#fff;--surface:#fff;--surface-alt:#fafaf9;--text:#0a0a0a;--muted:#6b7280;--border:#e5e7eb;--border-light:#f1f3f5;--ok:#047857;--ok-soft:#d1fae5;--bad:#b42318;--bad-soft:#fdecea;--warn:#f59e0b;--topbar-h:58px;--footer-h:60px;--font-scale:1}
+body.theme-dark{--navy:#10B981;--bg:#0a0a0a;--surface:#111;--surface-alt:#161616;--text:#fafafa;--muted:#a1a1aa;--border:#1f1f1f;--border-light:#2a2a2a;--accent:#10B981;--accent-hover:#34d399;--accent-soft:#064e3b;--ok:#34d399;--ok-soft:#064e3b;--bad:#f0928a;--bad-soft:#3a1f1d}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Arial,Helvetica,sans-serif;font-size:calc(16px*var(--font-scale));line-height:1.5;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+button,input,select{font-family:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:2px;padding:10px 18px;font-size:14px;font-weight:700;transition:.12s;cursor:pointer}
+.btn:hover{background:var(--surface-alt)}.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.primary:hover{background:var(--navy-dark)}
+.screen{display:none}.screen.active{display:block}
+#screen-test.active{height:100vh;display:flex;flex-direction:column;overflow:hidden}
+.center{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;background:linear-gradient(180deg,#f7f9fc,#e9edf4)}
+body.theme-dark .center{background:linear-gradient(180deg,#13182a,#0d1120)}
+.card{width:100%;max-width:880px;background:var(--surface);border:1px solid var(--border);border-radius:2px;box-shadow:0 12px 24px rgba(17,24,39,.1);padding:34px}
+.brand-row{display:inline-flex;align-items:center;gap:9px;color:var(--navy);font-weight:800;margin-bottom:14px}
+.landing-title{font-size:34px;color:var(--navy);margin-bottom:10px;letter-spacing:-.5px}
+.landing-desc{color:var(--muted);font-size:17px;max-width:760px;margin-bottom:22px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.info-box{background:var(--surface-alt);border:1px solid var(--border);border-radius:2px;padding:16px;text-align:center}
+.info-box strong{display:block;color:var(--navy);font-size:22px;margin-bottom:3px}
+.rules{margin:16px 0 26px;padding-left:20px}.rules li{margin:9px 0}
+.action-row{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+.topbar{height:var(--topbar-h);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:var(--surface);border-bottom:1px solid var(--border-light);position:relative;z-index:40}
+.tb-left{display:flex;align-items:center;gap:11px}.tb-logo{font-size:21px;font-weight:900;color:var(--navy);letter-spacing:.5px}.tb-id{font-size:14px;font-weight:700;color:var(--muted)}
+.tb-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.tb-right{display:flex;align-items:center;gap:6px}
+.timer{font-size:16px;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:.5px;padding:6px 12px;border-radius:20px;background:var(--surface-alt);border:1px solid var(--border);color:var(--text);margin-right:4px}
+.timer.warn{color:#fff;background:var(--warn);border-color:var(--warn)}.timer.danger{color:#fff;background:var(--bad);border-color:var(--bad);animation:flash 1s infinite}
+@keyframes flash{50%{opacity:.45}}
+.icon-btn{width:42px;height:42px;border:none;background:transparent;color:var(--text);border-radius:2px;display:inline-flex;align-items:center;justify-content:center;transition:.15s;cursor:pointer;font-size:18px}
+.icon-btn:hover{background:var(--surface-alt)}
+.tmain{flex:1;display:flex;overflow:hidden;min-height:0}
+.audio-bar{background:var(--surface-alt);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.audio-bar audio{flex:1;min-width:200px;height:36px}
+.audio-bar .sec-label{font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap}
+.qpanel{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:260px}
+.qphdr{display:flex;align-items:center;justify-content:space-between;padding:9px 16px;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--surface-alt)}
+.qptitle{font-size:13px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.5px}
+.qpbody{flex:1;overflow-y:auto;padding:20px 22px 40px}
+.qi{margin-bottom:15px;padding:10px;border:1px solid var(--border);border-radius:2px;background:var(--surface)}
+.qrow{display:flex;gap:10px}
+.qbdg{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qtxt{flex:1;font-size:14px;line-height:1.6;color:var(--text)}
+.gap-input{border:1px solid var(--border);background:var(--surface);color:var(--text);padding:4px 8px;font-size:14px;border-radius:2px;width:130px;margin:0 3px}
+.gap-input:focus{border-color:var(--accent);outline:none}
+select.gap-input{width:70px}
+.radio-row{display:flex;align-items:flex-start;gap:8px;padding:6px 8px;margin:3px 0;border-radius:2px;cursor:pointer}
+.radio-row:hover{background:var(--surface-alt)}
+.radio-row input[type=radio]{margin-top:3px;accent-color:var(--accent)}
+.radio-row.correct{background:var(--ok-soft)}
+.radio-row.incorrect{background:var(--bad-soft)}
+.tr-toggle{background:none;border:1px solid var(--border);border-radius:2px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer}
+.tr-toggle:hover{background:var(--surface-alt)}.tr-toggle.open{color:var(--accent);border-color:var(--accent)}
+.tr-body{display:none;background:var(--surface-alt);border:1px solid var(--border);border-radius:2px;padding:14px 16px;margin-top:8px;font-size:14px;line-height:1.7;color:var(--muted);white-space:pre-wrap;max-height:300px;overflow-y:auto}
+.tr-body.visible{display:block}
+.note-line{display:flex;align-items:flex-start;gap:6px;margin-bottom:6px;font-size:14px;line-height:1.8;flex-wrap:wrap}
+.note-bullet{color:var(--accent);font-weight:700;flex-shrink:0;margin-top:3px}
+.notes-block{background:var(--surface-alt);border:1px solid var(--border);border-radius:2px;padding:12px 14px;margin:8px 0}
+.note-group{margin-bottom:8px}
+.note-group-title{font-weight:700;color:var(--text);margin-bottom:3px;font-size:14px}
+.map-wrap{background:var(--surface-alt);border:1px solid var(--border);border-radius:2px;padding:10px;margin:10px 0;overflow-x:auto}
+.map-wrap svg{width:100%;max-width:640px;height:auto;display:block;margin:0 auto}
+.map-box{fill:var(--surface);stroke:var(--muted);stroke-width:1.5}
+.map-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.map-letter{fill:var(--text);font:700 15px Arial}
+.map-label{fill:var(--text);font:600 11px Arial}
+.map-title{fill:var(--navy);font:700 16px Arial}
+.options-grid{border:1px solid var(--border);border-radius:2px;padding:10px 12px;margin:8px 0;background:var(--surface-alt)}
+.options-grid .opt-title{font-weight:700;text-align:center;margin-bottom:4px;color:var(--navy);font-size:13px}
+.option-row b{display:inline-block;width:20px}
+.footer{height:var(--footer-h);flex-shrink:0;display:flex;align-items:center;border-top:1px solid var(--border);background:var(--surface);padding:0 12px;overflow-x:auto;gap:4px}
+.sec-tab{padding:8px 14px;border:none;background:transparent;color:var(--muted);font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;border-radius:2px}
+.sec-tab:hover{background:var(--surface-alt)}.sec-tab.active{color:var(--accent);background:var(--accent-soft)}
+.qnav-wrap{display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;padding:4px 0;min-width:200px}
+.qnb{width:28px;height:28px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px;flex-shrink:0}
+.qnb:hover{background:var(--surface-alt);border-color:var(--accent)}
+.qnb.answered{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.qnb.current{box-shadow:0 0 0 2px var(--accent)}
+.qnb.correct{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.qnb.incorrect{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.result-row{display:grid;grid-template-columns:40px 1fr 1fr;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--text);align-items:center}
+.result-row.incorrect{background:var(--bad-soft);padding:7px 8px;border-radius:2px}
+@media(max-width:768px){
+  .landing-title{font-size:26px}.card{padding:20px}.info-grid{grid-template-columns:1fr}
+  .tmain{flex-direction:column}.topbar{padding:0 8px}.tb-logo{font-size:17px}
+  .tb-center{position:static;left:auto;top:auto;transform:none;gap:4px}
+  .gap-input{width:100px}.timer{font-size:13px}.icon-btn{width:34px;height:34px;font-size:16px}
+}
+</style>
+</head>
+<body>
+<!-- Landing -->
+<div class="screen active" id="screen-landing">
+  <div class="center">
+    <div class="card">
+      <div class="brand-row">P8</div>
+      <h1 class="landing-title">CDI Listening 6</h1>
+      <p class="landing-desc">Computer-delivered IELTS Listening practice. 4 sections, 40 questions, audio playback, band-score results.</p>
+      <div class="info-grid">
+        <div class="info-box"><strong>30</strong> min</div>
+        <div class="info-box"><strong>40</strong> questions</div>
+        <div class="info-box"><strong>4</strong> sections</div>
+      </div>
+      <ul class="rules">
+        <li>Each recording plays <strong>ONCE</strong> only.</li>
+        <li>Read the questions before audio starts.</li>
+        <li>You can change sections and review answers.</li>
+      </ul>
+      <div class="action-row">
+        <button class="btn primary" onclick="startTest()">▶ Start Listening</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Test -->
+<div class="screen" id="screen-test">
+  <div class="topbar">
+    <div class="tb-left"><span class="tb-logo">L6</span></div>
+    <div class="tb-center" style="display:flex;align-items:center;gap:8px">
+      <button class="icon-btn" onclick="prevSection()">◀</button>
+      <span id="secLabel" style="font-size:13px;font-weight:700;color:var(--navy)">Section 1</span>
+      <button class="icon-btn" onclick="nextSection()">▶</button>
+    </div>
+    <div class="tb-right">
+      <span class="timer" id="timerDisplay">30:00</span>
+      <button class="icon-btn" onclick="toggleTimer()" id="timerBtn">⏸</button>
+      <button class="icon-btn" onclick="resetTimer()">⟳</button>
+      <button class="icon-btn" onclick="toggleTheme()">🌙</button>
+    </div>
+  </div>
+  <div class="audio-bar">
+    <span class="sec-label">Section <span id="audioSecNum">1</span></span>
+    <audio id="audioPlayer" controls preload="auto"></audio>
+    <button class="tr-toggle" id="trToggleBtn" onclick="toggleTranscript()">📄 Transcript</button>
+  </div>
+  <div class="tmain">
+    <div class="qpanel">
+      <div class="qphdr">
+        <span class="qptitle" id="qpanelTitle">Section 1 · Q1–10</span>
+        <span id="qCount" style="font-size:12px;color:var(--muted);font-weight:600">0 of 10</span>
+      </div>
+      <div class="qpbody" id="qpbody"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <button class="sec-tab active" data-sec="1" onclick="goSection(1)">Sec1</button>
+    <button class="sec-tab" data-sec="2" onclick="goSection(2)">Sec2</button>
+    <button class="sec-tab" data-sec="3" onclick="goSection(3)">Sec3</button>
+    <button class="sec-tab" data-sec="4" onclick="goSection(4)">Sec4</button>
+    <div class="qnav-wrap" id="qnav"></div>
+    <div style="margin-left:auto"><button class="btn primary" style="padding:8px 16px;font-size:13px" onclick="checkAnswers()">✓ Check</button></div>
+  </div>
+</div>
+
+<!-- Results -->
+<div class="screen" id="screen-results">
+  <div class="center">
+    <div class="card" style="max-width:700px">
+      <h1 style="color:var(--navy);margin-bottom:8px">Results</h1>
+      <div style="display:flex;gap:16px;margin-bottom:16px">
+        <div class="info-box" style="flex:1"><strong id="resScore">0</strong>/40</div>
+        <div class="info-box" style="flex:1"><strong id="resBand">0.0</strong> Band</div>
+      </div>
+      <div id="resDetails"></div>
+      <div class="action-row" style="margin-top:16px">
+        <button class="btn" onclick="retakeTest()">🔄 Retake</button>
+        <button class="btn primary" onclick="location.reload()">← Home</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const ANSWERS={1:'travel',2:'teaching',3:'9.15 am',4:'guide',5:'coach',6:'garden',7:'guitar',8:'farm',9:'friends',10:'supermarket',11:'C',12:'A',13:'A',14:'B',15:'C',16:'H',17:'B',18:'I',19:'A',20:'E',21:'B',22:'A',23:'B',24:'C',25:'C',26:'A',27:'F',28:'C',29:'A',30:'B',31:'ocean',32:'depth',33:'plants',34:'rice',35:'A',36:'A',37:'B',38:'A',39:'shellfish',40:'spring'};
+const ALTS={3:['9.15','9:15 am','9:15','9.15 a.m.','9:15am']};
+const AUDIO=['section1.mp3','section2.mp3','section3.mp3','section4.mp3'];
+const TOTAL=40;
+const RANGES={1:[1,10],2:[11,20],3:[21,30],4:[31,40]};
+
+const QDATA = {};
+
+// Section 1 - Notes completion
+QDATA[1] = {title:'Section 1 — Questions 1–10', type:'notes',
+  questions: [
+    {id:1,text:'graceb@ <span class="q-badge">1</span> <input class="gap-input" id="q1" placeholder="1" autocomplete="off"> .co.nz'},
+    {id:2,text:'a diploma in <span class="q-badge">2</span> <input class="gap-input" id="q2" placeholder="2" autocomplete="off">'},
+    {id:3,text:'from <span class="q-badge">3</span> <input class="gap-input" id="q3" placeholder="3" autocomplete="off"> am to 2 pm'},
+    {id:4,text:'a volunteer city <span class="q-badge">4</span> <input class="gap-input" id="q4" placeholder="4" autocomplete="off">'},
+    {id:5,text:'a volunteer netball team <span class="q-badge">5</span> <input class="gap-input" id="q5" placeholder="5" autocomplete="off">'},
+    {id:6,text:'likes to work in her <span class="q-badge">6</span> <input class="gap-input" id="q6" placeholder="6" autocomplete="off">'},
+    {id:7,text:'plays the <span class="q-badge">7</span> <input class="gap-input" id="q7" placeholder="7" autocomplete="off">'},
+    {id:8,text:'working on a <span class="q-badge">8</span> <input class="gap-input" id="q8" placeholder="8" autocomplete="off"> for a month'},
+    {id:9,text:'wants to have more <span class="q-badge">9</span> <input class="gap-input" id="q9" placeholder="9" autocomplete="off">'},
+    {id:10,text:'advertisement at the <span class="q-badge">10</span> <input class="gap-input" id="q10" placeholder="10" autocomplete="off">'}
+  ],
+  header:'Volunteer work application form: Grace Brown',
+  transcript:'Part One. You will hear a man who runs a volunteer agency interviewing a woman called Grace, who is applying to do volunteer work.\n\nWILLIAM: Hello, Grace... My mobile phones probably best. The number is 021 636 7189.\nGRACE: I check it frequently.\nWILLIAM: What is the address?\nGRACE: Its graceb@travel.co.nz. I chose it when I was younger.\nWILLIAM: Now do you have any particular qualifications?\nGRACE: I used to be in teaching. I got my diploma.\nWILLIAM: When will you be available?\nGRACE: I cant start before 8:15 or past 3 oclock.\nWILLIAM: So 9:15am to 2pm. Monday to Friday.\nGRACE: Yes.\nWILLIAM: Have you done any volunteer work?\nGRACE: During the Rugby World Cup, I worked as a city guide. At university, I coached a netball team.\nWILLIAM: Do you have any other interests?\nGRACE: I love to get out in my garden. I play the guitar.\nWILLIAM: I have a position helping out on a farm for a month.\nWILLIAM: Why do you want to volunteer?\nGRACE: I would like to make more friends. Also I like helping others.\nWILLIAM: How did you find our agency?\nGRACE: I saw your advertisement at the supermarket.'
+};
+
+// Section 2 - MCQ + Map
+QDATA[2] = {title:'Section 2 — Questions 11\u201320', type:'mcq-map',
+  questions: [
+    {id:11,type:'mcq',stem:'What should employees bring to work?',opts:['A gloves','B lunch','C water'],ans:'C'},
+    {id:12,type:'mcq',stem:'If employees cant come to work, they should',opts:['A contact the duty manager','B leave a phone message','C call their team leader'],ans:'A'},
+    {id:13,type:'mcq',stem:'One problem with customers that may occur now is',opts:['A they sometimes fail to return baskets','B they eat fruit before paying','C they can be unsure about prices'],ans:'A'},
+    {id:14,type:'mcq',stem:'One benefit of working at the strawberry farm is',opts:['A friends get a small discount','B employees get free fresh fruit','C discount on gift items'],ans:'B'},
+    {id:15,type:'map',stem:'Staff room',opts:'ABCDEFGHIJ',ans:'C'},
+    {id:16,type:'map',stem:'Administration',opts:'ABCDEFGHIJ',ans:'H'},
+    {id:17,type:'map',stem:'Packing shed',opts:'ABCDEFGHIJ',ans:'B'},
+    {id:18,type:'map',stem:'Staff car park',opts:'ABCDEFGHIJ',ans:'I'},
+    {id:19,type:'map',stem:'Ripe strawberries',opts:'ABCDEFGHIJ',ans:'A'},
+    {id:20,type:'map',stem:'Unripe strawberries',opts:'ABCDEFGHIJ',ans:'E'}
+  ],
+  transcript:'Part Two. You will hear the owner of a strawberry farm talking to a group of new employees.\n\nHello, my name is Peter Blake... Summer is when we open to the public.\n\nWhat do you need to bring? Fill up your water bottles. We will put sandwiches out for lunch. Gloves should be worn at all times.\n\nIf you cant come in, contact the duty manager directly.\n\nLast year customers were unsure about prices. But we have signs now. People take baskets out of the shop leaving them in the car park.\n\nBenefits: you get a carton of strawberries at no charge. Family get 15% off.\n\nMap: Staff room is the middle of three buildings above main building. Administration is in the main building top left. Packing shed is below the water tanks. Staff car park is to the left of the main building. Ripe strawberries are the L-shaped section at top left. Unripe strawberries are above commercial growing area 1.'
+};
+
+// Section 3 - MCQ + Matching
+QDATA[3] = {title:'Section 3 — Questions 21\u201330', type:'mcq-match',
+  questions: [
+    {id:21,type:'mcq',stem:'What part of Kathys dissertation has the tutor just read?',opts:['A her results section','B her introductory chapter','C her review of the literature'],ans:'B'},
+    {id:22,type:'mcq',stem:'What did the tutor like about Kathys work?',opts:['A the organisation','B the style of writing','C the use of resources'],ans:'A'},
+    {id:23,type:'mcq',stem:'Kathy and the tutor agree that she needs to',opts:['A do more library research','B record more data','C narrow down her topic'],ans:'B'},
+    {id:24,type:'mcq',stem:'Why does the tutor give an example from his own experience?',opts:['A to show how successful he is','B to illustrate times have changed','C to encourage Kathy'],ans:'C'},
+    {id:25,type:'mcq',stem:'Kathy would like the tutor to advise her on her',opts:['A layout','B bibliography','C appendices'],ans:'C'},
+    {id:26,type:'mcq',stem:'What is Kathy going to do next?',opts:['A try out some software','B go to a seminar','C design a new pump'],ans:'A'},
+    {id:27,type:'match',stem:'Mechanical Engineers Society meetings',opts:'ABCDEF',ans:'F'},
+    {id:28,type:'match',stem:'Visiting different workplaces',opts:'ABCDEF',ans:'C'},
+    {id:29,type:'match',stem:'Getting work experience abroad',opts:'ABCDEF',ans:'A'},
+    {id:30,type:'match',stem:'Attending an international conference',opts:'ABCDEF',ans:'B'}
+  ],
+  matcher: [{l:'A',r:'broadens practical experience'},{l:'B',r:'chance to publicise own work'},{l:'C',r:'effective way of keeping up-to-date'},{l:'D',r:'looks good on a CV'},{l:'E',r:'provides useful access to resources'},{l:'F',r:'way to make useful contacts'}],
+  transcript:'Part Three. You will hear an engineering student called Kathy discussing a piece of work with her tutor.\n\nTUTOR: I have been through your first chapter now. The overall structure is clear.\nKATHY: I was pleased I decided to focus on water pumps.\nTUTOR: I think you would get more convincing results if you took some additional measurements.\nKATHY: So what do you suggest?\nTUTOR: Have a word with James Higgins. He is giving a lecture on hydraulics.\nKATHY: Any advice on my work?\nTUTOR: What about your appendices?\nKATHY: I think I will investigate the CAD software.\nTUTOR: Go to Mechanical Engineers Society meetings to network. Visit different workplaces to keep up-to-date. Work abroad to broaden experience. Attend a conference to publicise your work.'
+};
+
+// Section 4 - Sentence + MCQ + Notes
+QDATA[4] = {title:'Section 4 — Questions 31\u201340', type:'mixed',
+  sections: [
+    {prompt:'<p>Complete the sentences. <strong>ONE WORD ONLY</strong>.</p><p style="text-align:center;font-weight:700;margin-top:6px">American Salt Marshes</p>',
+     items:[
+       {id:31,text:'The salt content can be as high as that of the <span class="q-badge">31</span> <input class="gap-input" id="q31" placeholder="31"> .'},
+       {id:32,text:'There are changes in salinity and in the <span class="q-badge">32</span> <input class="gap-input" id="q32" placeholder="32"> and warmth of the water.'},
+       {id:33,text:'Worms and shrimps feed on the <span class="q-badge">33</span> <input class="gap-input" id="q33" placeholder="33"> that grow in the marsh.'},
+       {id:34,text:'Marshland in the US has been used for <span class="q-badge">34</span> <input class="gap-input" id="q34" placeholder="34"> cultivation.'}
+     ]},
+    {prompt:'<p>Choose <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.</p>',
+     mcqs:[
+       {id:35,stem:'One result of artificial walls in salt marshes is that',opts:['A water levels can get too high','B wildlife has less space','C water quality is difficult to control'],ans:'A'},
+       {id:36,stem:'People have complained about dikes because',opts:['A access for walkers is reduced','B the insect population increased','C natural beauty is affected'],ans:'A'},
+       {id:37,stem:'In the 20th century, marshes became',opts:['A salt extraction sites','B residential areas','C protected insect reserves'],ans:'B'},
+       {id:38,stem:'There are now laws to prevent',opts:['A the erosion of soil','B the building of more walls','C the extinction of sealife'],ans:'A'}
+     ]},
+    {prompt:'<p>Complete the notes. <strong>NO MORE THAN TWO WORDS</strong>.</p><p style="font-weight:700;margin-top:6px">The Horseshoe Crab</p>',
+     items:[
+       {id:39,text:'Most common food: <span class="q-badge">39</span> <input class="gap-input" id="q39" placeholder="39">'},
+       {id:40,text:'Time when female lays eggs: <span class="q-badge">40</span> <input class="gap-input" id="q40" placeholder="40">'}
+     ]}
+  ],
+  transcript:'Part Four. You will hear part of a lecture about American salt marshes.\n\nSalt marshes are found on the coast. The salinity ranges from ocean strength to almost fresh. The amount of salt rises and falls, as does the depth and warmth of the water. Worms and shrimps feed on the plants that thrive there. 200 years ago marshland was controlled so that rice could be grown.\n\nArtificial earth walls or dikes restrict the movement of water, so the natural habitat is reduced. People are unhappy because it is more difficult for walkers. In the mid 20th century over half of salt marshes were destroyed due to filling for housing developments.\n\nState laws limit the amount of land loss to the sea.\n\nThe horseshoe crab is a relative of the spider. Its main diet is shellfish. The female lays eggs in spring.'
+};
+
+let sec=1, curQ=1, checked=false, timerOn=true, themeDark=false;
+let secs=1800;
+let timerInt;
+
+function $(id){return document.getElementById(id)}
+
+function startTest(){
+  sec=1; curQ=1; checked=false;
+  $('screen-landing').classList.remove('active');
+  $('screen-test').classList.add('active');
+  loadSection(1);
+  startTimer();
+}
+
+function startTimer(){
+  clearInterval(timerInt);
+  timerInt=setInterval(()=>{
+    if(!timerOn)return;
+    secs--;
+    let m=Math.floor(secs/60), s=secs%60;
+    $('timerDisplay').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    if(secs<=0)clearInterval(timerInt);
+  },1000);
+}
+
+function toggleTimer(){timerOn=!timerOn;$('timerBtn').textContent=timerOn?'⏸':'▶'}
+function resetTimer(){secs=1800;timerOn=true;$('timerBtn').textContent='⏸';startTimer()}
+function toggleTheme(){themeDark=!themeDark;document.body.classList.toggle('theme-dark',themeDark)}
+
+function loadSection(n){
+  sec=n;
+  let d=QDATA[n];
+  $('secLabel').textContent='Section '+n;
+  $('audioSecNum').textContent=n;
+  $('qpanelTitle').textContent=d.title;
+  $('audioPlayer').src=AUDIO[n-1];
+  $('audioPlayer').load();
+  renderQuestions(n);
+  renderNav();
+  updateCount();
+  $('trToggleBtn').classList.remove('open');
+  document.querySelectorAll('.sec-tab').forEach(b=>b.classList.toggle('active',+b.dataset.sec===n));
+}
+
+function renderQuestions(n){
+  let d=QDATA[n], html='';
+  if(n===1){
+    html='<div class="notes-block"><div style="font-weight:700;font-size:16px;text-align:center;margin-bottom:10px;color:var(--navy)">'+d.header+'</div>';
+    html+='<div class="note-line"><strong>Mobile phone:</strong> 021 636 7189</div>';
+    d.questions.forEach(q=>{
+      html+='<div class="note-line" data-q="'+q.id+'">• '+q.text+'</div>';
+    });
+    html+='</div>';
+  } else if(n===2){
+    let mcqs=d.questions.filter(q=>q.type==='mcq');
+    mcqs.forEach(q=>{
+      html+='<div class="qi" data-q="'+q.id+'"><div class="qrow"><div class="qbdg">'+q.id+'</div><div class="qtxt">'+q.stem+'</div></div><div class="opts">';
+      q.opts.forEach(o=>{
+        html+='<label class="radio-row"><input type="radio" name="q'+q.id+'" value="'+o[0]+'" onchange="saveAns('+q.id+',this.value)"> '+o+'</label>';
+      });
+      html+='</div></div>';
+    });
+    // Map
+    html+='<div class="qi"><div class="qrow"><div class="qbdg">15</div><div class="qtxt"><strong>Questions 15\u201320</strong><br>Label the map below.</div></div>';
+    html+='<div class="map-wrap"><svg viewBox="0 0 720 480"><text x="360" y="30" text-anchor="middle" class="map-title">Strawberry farm</text>';
+    html+='<rect x="20" y="45" width="680" height="410" class="map-line"/>';
+    html+='<rect x="55" y="65" width="155" height="95" class="map-box"/><text x="128" y="118" text-anchor="middle" class="map-letter">A</text>';
+    html+='<circle cx="290" cy="95" r="14" class="map-tank"/><circle cx="330" cy="95" r="14" class="map-tank"/><circle cx="290" cy="130" r="14" class="map-tank"/><circle cx="330" cy="130" r="14" class="map-tank"/>';
+    html+='<rect x="455" y="65" width="150" height="105" class="map-box"/><text x="530" y="122" text-anchor="middle" class="map-letter">E</text>';
+    html+='<rect x="635" y="90" width="42" height="180" class="map-box"/><text x="656" y="185" text-anchor="middle" class="map-letter">F</text>';
+    html+='<rect x="252" y="180" width="44" height="44" class="map-box"/><text x="274" y="207" text-anchor="middle" class="map-letter">B</text>';
+    html+='<rect x="305" y="180" width="38" height="44" class="map-box"/><text x="324" y="207" text-anchor="middle" class="map-letter">C</text>';
+    html+='<rect x="358" y="200" width="44" height="36" class="map-box"/><text x="380" y="223" text-anchor="middle" class="map-letter">D</text>';
+    html+='<rect x="55" y="175" width="120" height="120" class="map-box"/><text x="110" y="240" text-anchor="middle" class="map-letter">G</text>';
+    html+='<rect x="235" y="250" width="48" height="48" class="map-box"/><text x="259" y="279" text-anchor="middle" class="map-letter">H</text>';
+    html+='<rect x="90" y="315" width="34" height="60" class="map-box"/><text x="107" y="350" text-anchor="middle" class="map-letter">I</text>';
+    html+='<rect x="235" y="315" width="55" height="80" class="map-box"/><text x="262" y="360" text-anchor="middle" class="map-letter">J</text>';
+    html+='<rect x="318" y="310" width="122" height="90" class="map-box"/><text x="379" y="360" text-anchor="middle" style="font:700 12px Arial;fill:var(--text);">Main building</text>';
+    html+='</svg></div>';
+    html+='<div class="notes-block">';
+    d.questions.filter(q=>q.type==='map').forEach(q=>{
+      html+='<div class="note-line" data-q="'+q.id+'"><strong>'+q.id+'</strong> '+q.stem+' <select class="gap-input" id="q'+q.id+'" onchange="saveAns('+q.id+',this.value)"><option value=""></option>';
+      'ABCDEFGHIJ'.split('').forEach(l=>html+='<option value="'+l+'">'+l+'</option>');
+      html+='</select></div>';
+    });
+    html+='</div></div>';
+  } else if(n===3){
+    let mcqs=d.questions.filter(q=>q.type==='mcq');
+    mcqs.forEach(q=>{
+      html+='<div class="qi" data-q="'+q.id+'"><div class="qrow"><div class="qbdg">'+q.id+'</div><div class="qtxt">'+q.stem+'</div></div><div class="opts">';
+      q.opts.forEach(o=>{
+        html+='<label class="radio-row"><input type="radio" name="q'+q.id+'" value="'+o[0]+'" onchange="saveAns('+q.id+',this.value)"> '+o+'</label>';
+      });
+      html+='</div></div>';
+    });
+    // Matching
+    html+='<div class="options-grid"><div class="opt-title">Benefits</div>';
+    d.matcher.forEach(m=>html+='<div class="option-row"><b>'+m.l+'</b> '+m.r+'</div>');
+    html+='</div>';
+    let matches=d.questions.filter(q=>q.type==='match');
+    matches.forEach(q=>{
+      html+='<div class="note-line" data-q="'+q.id+'"><strong>'+q.id+'</strong> '+q.stem+' <select class="gap-input" id="q'+q.id+'" onchange="saveAns('+q.id+',this.value)"><option value=""></option>';
+      'ABCDEF'.split('').forEach(l=>html+='<option value="'+l+'">'+l+'</option>');
+      html+='</select></div>';
+    });
+  } else if(n===4){
+    d.sections.forEach(s=>{
+      html+='<div class="qi">';
+      html+='<div class="qtxt">'+s.prompt+'</div>';
+      if(s.items) s.items.forEach(q=>{
+        html+='<div class="note-line" data-q="'+q.id+'">• '+q.text+'</div>';
+      });
+      if(s.mcqs) s.mcqs.forEach(q=>{
+        html+='<div class="qi" data-q="'+q.id+'"><div class="qrow"><div class="qbdg">'+q.id+'</div><div class="qtxt">'+q.stem+'</div></div><div class="opts">';
+        q.opts.forEach(o=>{
+          html+='<label class="radio-row"><input type="radio" name="q'+q.id+'" value="'+o[0]+'" onchange="saveAns('+q.id+',this.value)"> '+o+'</label>';
+        });
+        html+='</div></div>';
+      });
+      html+='</div>';
+    });
+  }
+  $('qpbody').innerHTML=html;
+}
+
+function saveAns(n,v){
+  document.getElementById('q'+n).dataset.val=v;
+  renderNav();
+  updateCount();
+}
+
+function getAns(n){
+  let el=document.getElementById('q'+n);
+  if(!el)return '';
+  if(el.tagName==='SELECT'||el.tagName==='INPUT') return el.value.trim();
+  let r=document.querySelector('input[name="q'+n+'"]:checked');
+  return r?r.value:'';
+}
+
+function isAns(n){
+  let v=getAns(n);
+  return v!=='';
+}
+
+function renderNav(){
+  let html='';
+  for(let i=1;i<=TOTAL;i++){
+    let a=isAns(i)?' answered':'';
+    let c=i===curQ?' current':'';
+    html+='<button class="qnb'+a+c+'" onclick="goQ('+i+')">'+i+'</button>';
+  }
+  $('qnav').innerHTML=html;
+}
+
+function goQ(n){
+  curQ=n;
+  let s=Object.entries(RANGES).find(([k,v])=>n>=v[0]&&n<=v[1]);
+  if(s&&+s[0]!==sec){loadSection(+s[0]);}
+  renderNav();
+  let el=document.querySelector('[data-q="'+n+'"]');
+  if(el)el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function updateCount(){
+  let r=RANGES[sec],c=0;
+  for(let i=r[0];i<=r[1];i++)if(isAns(i))c++;
+  $('qCount').textContent=c+' of '+10;
+}
+
+function prevSection(){if(sec>1)loadSection(sec-1)}
+function nextSection(){if(sec<4)loadSection(sec+1)}
+function goSection(n){loadSection(n)}
+
+function checkCorrect(n){
+  let ans=getAns(n).toLowerCase().replace(/\s+/,' ');
+  let correct=String(ANSWERS[n]).toLowerCase().replace(/\s+/,' ');
+  if(ans===correct)return true;
+  if(ALTS[n])return ALTS[n].some(a=>ans===a.toLowerCase().replace(/\s+/,' '));
+  return false;
+}
+
+function checkAnswers(){
+  checked=true; clearInterval(timerInt); timerOn=false;
+  let score=0, html='';
+  for(let i=1;i<=TOTAL;i++){
+    let ok=checkCorrect(i);
+    if(ok)score++;
+    let ua=getAns(i)||'—';
+    html+='<div class="result-row'+(ok?'':' incorrect')+'"><b>'+i+'</b><span>'+ua+'</span><span style="color:var(--ok)">'+ANSWERS[i]+'</span></div>';
+  }
+  $('resScore').textContent=score;
+  let bands={40:9,39:9,38:8.5,37:8.5,36:8,35:8,34:7.5,33:7.5,32:7,31:7,30:7,29:6.5,28:6.5,27:6.5,26:6,25:6,24:6,23:5.5,22:5.5,21:5.5,20:5.5,19:5,18:5,17:5,16:5,15:4.5,14:4.5,13:4.5,12:4,11:4,10:4,9:3.5,8:3.5,7:3,6:3,5:2.5,4:2.5,3:2,2:2,1:1,0:0};
+  $('resBand').textContent=bands[score]||0;
+  $('resDetails').innerHTML='<div style="display:grid;grid-template-columns:40px 1fr 1fr;gap:10px;font-weight:600;padding:6px 0;border-bottom:2px solid var(--border)"><span>Q</span><span>Your Answer</span><span>Correct</span></div>'+html;
+  $('screen-test').classList.remove('active');
+  $('screen-results').classList.add('active');
+}
+
+function retakeTest(){
+  document.querySelectorAll('input[type=text]').forEach(e=>e.value='');
+  document.querySelectorAll('select').forEach(e=>e.value='');
+  document.querySelectorAll('input[type=radio]').forEach(e=>e.checked=false);
+  checked=false;
+  loadSection(1);
+  secs=1800;timerOn=true;$('timerBtn').textContent='⏸';startTimer();
+  $('screen-results').classList.remove('active');
+  $('screen-test').classList.add('active');
+}
+
+let trOpen=false;
+function toggleTranscript(){
+  trOpen=!trOpen;
+  $('trToggleBtn').classList.toggle('open',trOpen);
+  let existing=document.getElementById('trBody');
+  if(existing){existing.remove();trOpen=false;$('trToggleBtn').classList.remove('open');return;}
+  let div=document.createElement('div');
+  div.id='trBody';
+  div.className='tr-body visible';
+  div.textContent=QDATA[sec].transcript||'Transcript not available.';
+  $('audioBar').after(div);
+}
+</script>
+</body>
+</html>
