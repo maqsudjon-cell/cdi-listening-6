@@ -146,7 +146,6 @@
     <div class="header-actions">
       <span class="progress-pill" id="progressPill">Progress: <span id="progCount">0</span>/40</span>
       <button class="btn btn-ghost" onclick="resetTest()">↻ Reset</button>
-      <button class="btn btn-primary" onclick="submitTest()">✓ Submit</button>
     </div>
   </div>
 </div>
@@ -155,7 +154,13 @@
     <h1>CDI Listening 6</h1>
     <p>40 questions across 4 sections.</p>
   </div>
-  <div id="mainContent"></div>
+  <div id="mainContent">
+  <div class="start-banner">
+    <h3>🎧 Ready to start?</h3>
+    <p>Play each section once. Read questions before the audio starts.</p>
+    <button class="btn-start" onclick="startTest()">▶ Start Test</button>
+  </div>
+  </div>
 </div>
 
 <script>
@@ -329,7 +334,6 @@ function resetTest(){
   renderSec(1);
   updateProg();
 }
-window.onload=startTest;
 </script>
 </body>
 </html>
